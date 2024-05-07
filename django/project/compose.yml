@@ -1,0 +1,27 @@
+# Docker Composeのファイルフォーマットバージョンを指定し
+version: "3.9"
+
+# このdocker-composeで定義するサービスをリスト
+services:
+  # "web"はサービス名で、任意の名前を付ける
+  web:
+    # Dockerfileを使ってDockerイメージをビルド
+    build: .
+    # Dockerコンテナ起動後に実行されるコマンドを指定します。ここではDjangoの開発サーバを起動
+    command: python manage.py runserver 0.0.0.0:8000
+    # ホストとDockerコンテナ間でファイルを共有する設定をします。左側がホストのパス、右側がDocker内のパス
+    volumes:
+      - .:/code
+    # ホストとDockerコンテナ間でポートをフォワードします。左側がホストのポート、右側がDocker内のポート
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+  db:
+    image: postgres
+    ports:
+      - "5432:5432"
+    environment:
+      - POSTGRES_DB=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres

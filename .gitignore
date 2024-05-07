@@ -1,0 +1,7 @@
+.vscode
+
+.env
+
+django/project/_api_v1
+
+django/project/_apps

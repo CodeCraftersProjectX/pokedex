@@ -1,0 +1,181 @@
+# Django
+Django==4.2.3
+
+# postgres
+psycopg[binary,pool]==3.1.9
+
+# MySQL
+mysqlclient==2.1.1
+
+# uwsgi
+uwsgi==2.0.21
+
+# asgiref
+asgiref==3.6.0
+
+# uvicorn
+uvicorn[standard]==0.20.0
+
+# Django REST Framework
+djangorestframework==3.14.0
+adrf==0.1.0
+
+# Django-Filter
+django-filter==22.1
+
+# BOTO3
+boto3==1.26.44
+
+# DJANGO_ENVIRON
+django-environ==0.9.0
+
+# django-widget-tweaks
+django-widget-tweaks==1.4.12
+
+######## DEVTOOLS
+#### django-extensions
+# AWS環境でも shell_plus コマンドを利用したいため、 django-extensions をインストールします。
+# werkzeug は django-extensions に必要なパッケージです。
+#
+# AWS環境では、環境変数で指定された場合のみ利用可能となります。 参照: config/settings/__init__.py
+werkzeug==2.0.0
+django-extensions==3.2.1
+
+# responses
+responses==0.23.1
+
+
+# CloudWatch
+watchtower==3.0.0
+
+# paramiko
+paramiko==2.11.0
+types-paramiko==2.11.6
+
+pytz==2022.1  # https://github.com/stub42/pytz
+# python-slugify==6.1.2  # https://github.com/un33k/python-slugify
+Pillow==9.1.1  # https://github.com/python-pillow/Pillow
+rcssmin==1.1.0  # https://github.com/ndparker/rcssmin
+# argon2-cffi==21.3.0  # https://github.com/hynek/argon2_cffi
+# hiredis==2.0.0  # https://github.com/redis/hiredis-py
+
+# Django
+# ------------------------------------------------------------------------------
+django-model-utils==4.2.0  # https://github.com/jazzband/django-model-utils
+django-allauth==0.50.0  # https://github.com/pennersr/django-allauth
+django-crispy-forms==1.14.0  # https://github.com/django-crispy-forms/django-crispy-forms
+crispy-bootstrap5==0.6  # https://github.com/django-crispy-forms/crispy-bootstrap5
+django-compressor==3.1  # https://github.com/django-compressor/django-compressor
+# Django REST Framework
+django-cors-headers==3.11.0 # https://github.com/adamchainz/django-cors-headers
+drf-spectacular==0.22.1  # https://github.com/tfranzel/drf-spectacular
+
+# django login required middleware
+django-login-required-middleware==0.9.0
+
+# Django stubs extension
+django-stubs==1.14.0
+django-stubs-ext==0.7.0  # https://github.com/typeddjango/django-stubs#i-cannot-use-queryset-or-manager-with-type-annotations
+
+types-factory-boy==0.3.0
+
+# PRODUCTION?
+# Collectfast==2.2.0  # https://github.com/antonagestam/collectfast
+#
+# # Django
+# # ------------------------------------------------------------------------------
+# django-storages[boto3]==1.12.3  # https://github.com/jschneier/django-storages
+# django-anymail[amazon_ses]==8.6  # https://github.com/anymail/django-anymail
+
+# cryptography
+cryptography==38.0.1
+
+# django-model-utils
+django-model-utils==4.2.0
+
+# slack_sdk
+slack_sdk==3.19.3
+
+# retry
+retry==0.9.2
+
+# types-retry
+types-retry==0.9.9
+
+# testfixtures
+testfixtures==7.0.0
+
+# xmltodict
+xmltodict==0.13.0
+
+# python-dateutil
+python-dateutil==2.8.2
+
+# types-python-dateutil
+types-python-dateutil==2.8.19
+
+# jpholiday
+jpholiday==0.1.8
+
+# django-tenants
+django-tenants==3.5.0
+
+# colorlog
+colorlog==6.7.0
+
+# boto3-stubs
+boto3-stubs[quicksight]==1.26.16
+
+# polars
+polars[numpy]==0.18.6
+
+# dictknife
+dictknife==0.14.0
+
+# pyarrow
+pyarrow==12.0.0
+
+# pycryptodome
+# ライブラリ選定について:
+#   https://diamondhead.atlassian.net/wiki/spaces/SAAS/pages/3442245662#ライブラリ選定について
+pycryptodome==3.19.0
+
+############
+## Non Version Fix
+
+# sentry-sdk
+sentry-sdk
+
+# pyjson5
+pyjson5==1.6.2
+
+# Amazon Selling Partner API
+# https://d-head.backlog.com/view/DH_SCS_RENEWAL_PROJ-2356 に選定の理由を記載しています。
+python-amazon-sp-api==1.0.5
+
+# django_utility.plugins.progress_bar.print_progress で利用するプログレスバー表示のためのパッケージ
+tqdm==4.65.0
+
+# sqliteを生成するために利用
+db-to-sqlite[postgresql]==1.5
+
+# humanize
+humanize==4.8.0
+
+# Test Data
+# django_utility.plugins.stacked_context.stacked_context_creator で利用するため、開発環境以外でもインストールします。
+freezegun==1.2.2
+types-freezegun==1.1.10
+
+# opencv-python
+opencv-python==4.8.1.78
+# GA4
+google-api-python-client==2.101.0
+google-analytics-data==0.17.1
+
+# instagram投稿のmediaチェックで利用
+moviepy==1.0.3
+av==11.0.0
+
+# djangorestframework-api-key
+djangorestframework-api-key==2.2.0
